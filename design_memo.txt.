@@ -1,0 +1,25 @@
+Why is a tree appropriate for the doctor structure?
+
+I think a binary tree is a good choice for organizing the doctor reporting structure because it clearly shows the relationships between doctors.
+Each doctor has a specific position in the tree, and the root represents the doctor at the top of the hierarchy.
+For example, in our assignment, Dr. Croft is the root, while Dr. Phan and Dr. Goldsmith report directly to Dr. Croft. 
+I think this structure makes it easier to understand how the hospital's reporting system is organized.
+
+When might a software engineer use preorder, inorder, or postorder traversals?
+
+While working on this assignment, I learned that software engineers use different tree traversal methods depending on the task. 
+Preorder traversal processes the root before its children, making it useful when copying a tree. 
+Inorder traversal visits the left subtree, then the root, and finally the right subtree. 
+This method is helpful when working with a binary search tree because it returns values in sorted order. 
+Postorder traversal processes the children before the parent, making it useful when deleting a tree or freeing up memory. 
+These examples helped me understand why choosing the right traversal method matters in programming.
+
+How do heaps help simulate real-time systems like emergency intake?
+
+I think a min-heap is useful for emergency intake because it helps hospitals treat patients based on their urgency rather than their arrival order.
+In our program, each patient has an urgency score from 1 to 10, where 1 represents the highest priority. 
+For example, Taylor has an urgency of 1, so Taylor should be treated before Jordan, who has an urgency of 3. 
+When a new patient is added, the heapify_up() method helps move them to the correct position based on their urgency. 
+When the most urgent patient is removed using remove_min(), heapify_down() reorganizes the remaining patients to maintain the heap structure. 
+I learned that a heap makes it possible to quickly access the most urgent patient without searching through the entire list each time. 
+This makes it a good choice for systems where priorities can change as new patients arrive.
