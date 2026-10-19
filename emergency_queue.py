@@ -119,3 +119,15 @@ single_heap = MinHeap()
 single_heap.insert(Patient("Riley", 2))
 print(single_heap.remove_min().name)
 print(single_heap.peek())
+# Test heapify_down with multiple patients
+test_heap = MinHeap()
+
+test_heap.insert(Patient("Alex", 1))
+test_heap.insert(Patient("Blake", 3))
+test_heap.insert(Patient("Casey", 2))
+test_heap.insert(Patient("Drew", 7))
+test_heap.insert(Patient("Evan", 4))
+
+print("\nTest heapify_down:")
+print("Removed:", test_heap.remove_min().name)
+test_heap.print_heap()
