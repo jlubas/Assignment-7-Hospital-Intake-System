@@ -7,19 +7,15 @@ I think this structure makes it easier to understand how the hospital's reportin
 
 When might a software engineer use preorder, inorder, or postorder traversals?
 
-While working on this assignment, I learned that software engineers use different tree traversal methods depending on the task. 
-Preorder traversal processes the root before its children, making it useful when copying a tree. 
-Inorder traversal visits the left subtree, then the root, and finally the right subtree. 
-This method is helpful when working with a binary search tree because it returns values in sorted order. 
-Postorder traversal processes the children before the parent, making it useful when deleting a tree or freeing up memory. 
-These examples helped me understand why choosing the right traversal method matters in programming.
+While working on this assignment, I found that different traversal methods are useful for different tasks.
+Preorder visits the root before its children, which is helpful when copying a tree. 
+Inorder visits the left subtree, root, and right subtree, producing sorted values in a binary search tree.
+Postorder visits children before their parent, making it useful when deleting a tree. Each traversal method has a different purpose depending on the task.
 
 How do heaps help simulate real-time systems like emergency intake?
 
-I think a min-heap is useful for emergency intake because it helps hospitals treat patients based on their urgency rather than their arrival order.
-In our program, each patient has an urgency score from 1 to 10, where 1 represents the highest priority. 
-For example, Taylor has an urgency of 1, so Taylor should be treated before Jordan, who has an urgency of 3. 
-When a new patient is added, the heapify_up() method helps move them to the correct position based on their urgency. 
-When the most urgent patient is removed using remove_min(), heapify_down() reorganizes the remaining patients to maintain the heap structure. 
-I learned that a heap makes it possible to quickly access the most urgent patient without searching through the entire list each time. 
-This makes it a good choice for systems where priorities can change as new patients arrive.
+I think a min-heap is useful for emergency intake because patients are prioritized by urgency instead of arrival order. 
+In my program, urgency scores range from 1 to 10, with 1 being the highest priority. 
+For example, Taylor has an urgency of 1 and should be treated before Jordan, whose urgency is 3.
+When a patient is added, heapify_up() moves them into the correct position. After removing the most urgent patient using remove_min(), heapify_down() restores the heap property. 
+A heap helps me find the most urgent patient quickly without having to check every patient one by one.
